@@ -1,0 +1,11 @@
+Game point is destroy all target as less shoots as you can
+
++Create minethrowwer tube
++Create target cubes
++Create projectiles spehres
+Add SpwanManager which spawns enemies
+Add logic to shoot prokectile on space
+Add logic to count shot projectiles
+Add logic to rotate left rite minethrower with camera (camera rotates together with mibnethrower)
+Add logic to up and down minethrower
+Add logic to disappear cube on hit
