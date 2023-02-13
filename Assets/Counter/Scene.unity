@@ -3757,7 +3757,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 4338907107612037391, guid: bd49076b90ec702498cfbca7be483e46, type: 3}
   - {fileID: 5699379062647682216, guid: 316158ec2d921034182b14fb500fbe75, type: 3}
-  waveSize: 5000
+  waveSize: 50
   minRadius: 15
   maxRadius: 50
 --- !u!4 &1503261789

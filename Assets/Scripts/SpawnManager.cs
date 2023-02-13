@@ -22,26 +22,8 @@ public class SpawnManager : MonoBehaviour
         for (int i = 0; i < waveSize; i++)
         {
             var randomEnemy = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
-            
-            // var normRotation = Random.rotation;
-            // normRotation.x = 0;
-            // // normRotation.y = 0;
-            // normRotation.z = 0;
-            // Debug.Log($"normRotation: {normRotation}");
-            // Vector3 targetForward = normRotation * Vector3.back;
-            //
-            //
-            // var distance = Random.Range(minEdge, maxEdge);
-            // Debug.Log($"randomPoint: {randomEnemy.transform}, targetPoint: {randomEnemy.transform}");
-            // // var positionX = (maxEdge - minEdge) * randomPoint.x;
-            // // positionX = positionX < 0 ? positionX - minEdge : positionX + minEdge;
-            // // var positionY = (maxEdge - minEdge) * randomPoint.y;
-            // // positionY = positionY < 0 ? positionY - minEdge : positionY + minEdge;
-            // Debug.Log($"Position: {distance * targetForward}");
-
-            
  
-            Instantiate(randomEnemy, RandomBetweenRadius3D(minRadius, maxRadius), randomEnemy.transform.rotation);
+            Instantiate(randomEnemy, RandomBetweenRadius2D(minRadius, maxRadius), randomEnemy.transform.rotation);
         }
 
         waveSize++;
