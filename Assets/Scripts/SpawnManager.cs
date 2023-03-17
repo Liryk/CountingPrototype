@@ -22,8 +22,9 @@ public class SpawnManager : MonoBehaviour
         for (int i = 0; i < waveSize; i++)
         {
             var randomEnemy = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
- 
-            Instantiate(randomEnemy, RandomBetweenRadius2D(minRadius, maxRadius), randomEnemy.transform.rotation);
+            var randomPosition = RandomBetweenRadius2D(minRadius, maxRadius);
+            randomPosition.y = randomEnemy.GetComponent<MeshRenderer>().bounds.size.y / 2;
+            Instantiate(randomEnemy, randomPosition, randomEnemy.transform.rotation);
         }
 
         waveSize++;
@@ -43,11 +44,9 @@ public class SpawnManager : MonoBehaviour
     
     Vector3 RandomBetweenRadius2D(float minRad, float maxRad)
     {
-        float radius = Random.Range(minRadius, maxRadius);
+        float radius = Random.Range(minRad, maxRad);
         float angle = Random.Range(0, 360);
             
-        Debug.Log($"radius: {radius}, angle: {angle}, cos: {Mathf.Cos(Mathf.Deg2Rad * angle)}, sin: {Mathf.Sin(Mathf.Deg2Rad * angle)}");
- 
         float x = Mathf.Sin(Mathf.Deg2Rad * angle) * radius;
         float z = Mathf.Cos(Mathf.Deg2Rad * angle) * radius;
         float y = Mathf.Tan(Mathf.Deg2Rad * angle) * radius;

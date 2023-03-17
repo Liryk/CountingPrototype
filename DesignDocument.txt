@@ -1,0 +1,42 @@
+Overview
+You control a mortar in this game.
+You have to destroy as much enemies wehicles as you can in pedget time.
+When projectile hits enemy - enemy explodes. UI score updates on game screen.
+Player can rotate mortar around Y axis. And change mortar axis to shoot further or closer.
+Enemies cant move.
+Player will have 5 minutes for round. When times is over final ui with score will be shown.
+
+UI
+* ingame panel on top left corner with score. updates after each destroyed enemy.
+* ingame panel contains round timer. Where time ticks 60..59..58.
+* Whe round time is over displays message time is over
+
+Gameplay 
+Player can shoot with speed and shoot per second
+Player can rotate mortar around y axis and change mortar X axis to shoot further or closer. 
+Player can use differen shoot power by holding space btn
+When player hit enemy enemy destroys.
+Player can hit some power ups to modify projectile. For example larger explosion radius.
+When projectile hit the ground it exployds and if explosion radius covers enemy it destroys.
+Exemy cant move.
+
+Effects
+Enemy explosion particles effect
+Projectile explosion particles effect
+Shoot from mortar dust particles effect
+
+Sounds
+Background music
+Sound of rotating mortar around X and Y axis
+Sound of shoot
+Sound when projectile close to the ground
+Sound of projectile explosion
+Sound of  wehicle explosion
+Sound of changing projectile weight
+
+Powerups
+Bigger explosion
+Three fast shoot with projectiles with different weight
+Extra time
+
+

@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 8329385117474810700}
   - component: {fileID: 8329385117474810701}
   - component: {fileID: 8329385117474810702}
+  - component: {fileID: 796337144221266052}
+  - component: {fileID: 6757886573915751811}
   m_Layer: 0
   m_Name: Projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8329385117474810703}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.3953815, y: 1.8114159, z: -6.613288}
-  m_LocalScale: {x: 0.63, y: 1.138347, z: 0.63}
+  m_LocalScale: {x: 0.3, y: 0.6, z: 0.3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -89,9 +91,40 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8329385117474810703}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 2da3f796e75c7bd45a309cf7b8fc3687, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &796337144221266052
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8329385117474810703}
+  serializedVersion: 2
+  m_Mass: 10
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 1
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &6757886573915751811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8329385117474810703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9b4e51754d35a43a0355ecce08c2f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionForce: 800
+  explosionRadius: 6
+  fatalExplosionRadius: 3
