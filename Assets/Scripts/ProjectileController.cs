@@ -1,23 +1,22 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ProjectileController : MonoBehaviour
 {
     public float explosionForce;
     public float explosionRadius;
     public float fatalExplosionRadius;
-    
+    public UnityEvent<ExplosionData> exploded;
+    public AudioClip ShootImpactAudio;
+
     private string[] _destroyOnCollideTags;
-    private Rigidbody _rb;
-    
+    private AudioSource _audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         _destroyOnCollideTags = new[] { "Enemy", "Ground" };
-        _rb = GetComponent<Rigidbody>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -40,23 +39,15 @@ public class ProjectileController : MonoBehaviour
         {
             if (collision.gameObject.CompareTag(t))
             {
-                var destroyedEnemies = Physics.OverlapSphere(transform.position, fatalExplosionRadius, LayerMask.GetMask("Enemy"));
-                var affectedEnemies = Physics
-                    .OverlapSphere(transform.position, explosionRadius, LayerMask.GetMask("Enemy"))
-                    .Except(destroyedEnemies);
-                
-                foreach (var e in affectedEnemies)
-                {
-                    e.GetComponent<Rigidbody>()
-                        .AddExplosionForce(explosionForce, 
-                            transform.position, 
-                            explosionRadius, 
-                            10);
-                }
-                Array.ForEach(destroyedEnemies, e => Destroy(e.gameObject));
-                Destroy(gameObject);
+                exploded.Invoke(
+                    new ExplosionData(transform.position, explosionRadius, fatalExplosionRadius, explosionForce));
+                _audioSource.PlayOneShot(ShootImpactAudio);
+                //Remove visible part and let object play audio till the end
+                Destroy(gameObject.GetComponent<Rigidbody>());
+                Destroy(gameObject.GetComponentInChildren<MeshRenderer>());
+                Destroy(gameObject, ShootImpactAudio.length);
                 break;
-            } 
+            }
         }
     }
 }

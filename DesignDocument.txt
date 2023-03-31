@@ -11,6 +11,11 @@ UI
 * ingame panel contains round timer. Where time ticks 60..59..58.
 * Whe round time is over displays message time is over
 
+Powerups
+Bigger explosion
+Three fast shoot with projectiles with different weight
+Extra time
+
 Gameplay 
 Player can shoot with speed and shoot per second
 Player can rotate mortar around y axis and change mortar X axis to shoot further or closer. 
@@ -19,6 +24,13 @@ When player hit enemy enemy destroys.
 Player can hit some power ups to modify projectile. For example larger explosion radius.
 When projectile hit the ground it exployds and if explosion radius covers enemy it destroys.
 Exemy cant move.
+
+Graphic
+Terrain texture
+Enemy model
+Mortar model
+Projectile model
+Pwerups models
 
 Effects
 Enemy explosion particles effect
@@ -33,10 +45,5 @@ Sound when projectile close to the ground
 Sound of projectile explosion
 Sound of  wehicle explosion
 Sound of changing projectile weight
-
-Powerups
-Bigger explosion
-Three fast shoot with projectiles with different weight
-Extra time
 
 

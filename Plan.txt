@@ -11,8 +11,52 @@ Game point is destroy all target as less shoots as you can
 +Create small window in a bottom left corner where show mortarr and its angles
 +Then longer player press space button then farer projectile flies
 +Add arrow indicating mortar direction
++Create timer for round
++Final message when round is over
++Create ui where disaply count of shots
++Count of destroyed enemies
++Enemies per shot destroyed
++ Create powerups 3 different powerups per round
+ + larger damage (all enemies destroys inside splash)
+ + +10 sec to round time
+ + three shots with different amplitude at time
++ Mortar model 
+	https://assetstore.unity.com/packages/3d/environments/fantasy/battle-cannon-70589
++ Enemy model https://assetstore.unity.com/packages/3d/props/halloween-pack-by-rutz-237976
++ Powerups models
++ Projectile model
++ Terrain texture https://assetstore.unity.com/packages/3d/environments/fantasy/halloween-cemetery-set-19125
+Decorations
+ + Fix UI colors
+ + add sphere world - Sky from course library
 
-Create timer for round
-Create ui where disaply count of shots
-Count of destroyed enemies
-Enemies per shot destroyed
+Bugs
+ + Collect one powerup while other is active, restore powerup time
+
+Sounds
++ Background music - https://assetstore.unity.com/packages/audio/music/electronic/gambit-volume-5-spooky-edition-122444
++ Sound of rotating mortar around X and Y axis
+	+ develop system with axis sounds
+https://assetstore.unity.com/packages/audio/sound-fx/epic-arsenal-essential-elements-demo-packs-38428
+https://assetstore.unity.com/packages/audio/sound-fx/free-sound-effects-pack-155776
+https://assetstore.unity.com/packages/audio/sound-fx/toolkit-vol-2-sound-pack-bundle-198011
++ Sound of shoot
++ Sound of projectile explosion
++ Sound on picking powerup
++ Sound when time almost over - https://assetstore.unity.com/packages/audio/sound-fx/free-casual-game-sfx-pack-54116
++ Add text disaply info whe power up was collected
++sound of powering weapon
+
+UI
+Create UI panel with game descriptions:
+Destroy as many pumpkins as possible within the allotted time. Collect powerups to achieve the best result.
+Control:
+ Charge the cannon - hold spacebar
+ rotate the cannon - Left Arrow/Right Arrow or A/D
+ change the angle of the barrel - Up Arrow/Down Arrow or W/S
+
+Effects
+Pumkin explosion particles effect
+Projectile explosion particles effect
+Shoot from mortar dust particles effect
+

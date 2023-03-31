@@ -7,6 +7,7 @@ using Random = UnityEngine.Random;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] enemyPrefabs;
+    public GameObject[] powerupPrefabs;
     public int waveSize = 1;
     [FormerlySerializedAs("minEdge")] public float minRadius;
     [FormerlySerializedAs("maxEdge")] public float maxRadius;
@@ -15,6 +16,16 @@ public class SpawnManager : MonoBehaviour
     void Start()
     {
         SpawnWave();
+        SpawnPowerups();
+    }
+
+    private void SpawnPowerups()
+    {
+        foreach (var p in powerupPrefabs)
+        {
+            var randomPosition = RandomBetweenRadius2D(minRadius, maxRadius);
+            Instantiate(p, randomPosition, p.transform.rotation);
+        }
     }
 
     private void SpawnWave()
@@ -26,8 +37,6 @@ public class SpawnManager : MonoBehaviour
             randomPosition.y = randomEnemy.GetComponent<MeshRenderer>().bounds.size.y / 2;
             Instantiate(randomEnemy, randomPosition, randomEnemy.transform.rotation);
         }
-
-        waveSize++;
     }
     
     Vector3 RandomBetweenRadius3D(float minRad, float maxRad)
@@ -64,9 +73,5 @@ public class SpawnManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
-        {
-            SpawnWave();
-        }
     }
 }
