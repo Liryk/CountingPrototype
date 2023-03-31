@@ -1,4 +1,5 @@
 Overview
+Destroy as many enemies as possible within the provided time. Collect power-ups to achieve the best result.
 You control a mortar in this game.
 You have to destroy as much enemies wehicles as you can in pedget time.
 When projectile hits enemy - enemy explodes. UI score updates on game screen.
@@ -9,11 +10,11 @@ Player will have 5 minutes for round. When times is over final ui with score wil
 UI
 * ingame panel on top left corner with score. updates after each destroyed enemy.
 * ingame panel contains round timer. Where time ticks 60..59..58.
-* Whe round time is over displays message time is over
+* When  round time is over displays message time is over
 
 Powerups
 Bigger explosion
-Three fast shoot with projectiles with different weight
+Three fast shoot
 Extra time
 
 Gameplay 
@@ -22,8 +23,8 @@ Player can rotate mortar around y axis and change mortar X axis to shoot further
 Player can use differen shoot power by holding space btn
 When player hit enemy enemy destroys.
 Player can hit some power ups to modify projectile. For example larger explosion radius.
-When projectile hit the ground it exployds and if explosion radius covers enemy it destroys.
-Exemy cant move.
+When projectile hit the ground it exploids and if explosion radius covers enemy it destroys.
+Enemy cant move.
 
 Graphic
 Terrain texture
@@ -41,9 +42,6 @@ Sounds
 Background music
 Sound of rotating mortar around X and Y axis
 Sound of shoot
-Sound when projectile close to the ground
 Sound of projectile explosion
-Sound of  wehicle explosion
-Sound of changing projectile weight
 
 

@@ -7,6 +7,10 @@ using UnityEngine;
 public class WeaponController : MonoBehaviour
 {
     [Header("GameObjects")]
+    public ParticleSystem projectileExplosion;
+    public ParticleSystem pumpkinExplosion;
+    public ParticleSystem barrelShootParticles;
+    public GameObject barrelPivot;
     public GameObject ingameTxt;
     public GameObject projectilePrefab;
     public GameObject projectileSpawnPoint;
@@ -66,6 +70,7 @@ public class WeaponController : MonoBehaviour
 
     private void OnShoot(float power)
     {
+        Instantiate(barrelShootParticles, barrelPivot.transform.position, barrel.transform.rotation);
         AudioSource.PlayOneShot(ShootAudio);
         if (currentPowerUp == PowerupTypeEnum.MoreProjectiles)
         {
@@ -103,6 +108,7 @@ public class WeaponController : MonoBehaviour
             .OverlapSphere(explosionData.ExplosionCoordinates, explosionRadiusLocal, LayerMask.GetMask("Targets"))
             .Except(destroyedEnemies);
         
+        Instantiate(projectileExplosion, explosionData.ExplosionCoordinates, Quaternion.Euler(0, 0, 0));
         foreach (var e in affectedEnemies)
         {
             if (e.gameObject.CompareTag("Enemy"))
@@ -119,6 +125,10 @@ public class WeaponController : MonoBehaviour
             if (e.gameObject.CompareTag("Powerup"))
             {
                 ProcessPowerup(e.gameObject);
+            }
+            else
+            {
+                Instantiate(pumpkinExplosion, e.gameObject.transform.position, Quaternion.Euler(-45, 0, 0));
             }
             Destroy(e.gameObject);
         });

@@ -2543,7 +2543,7 @@ Transform:
   m_Children:
   - {fileID: 1279307732}
   m_Father: {fileID: 1264196435}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1123613857 stripped
 Transform:
@@ -4018,6 +4018,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1279307733}
     - target: {fileID: 189395769, guid: dc48f4dca378853429ef6acedbc2dc09, type: 3}
+      propertyPath: barrelPivot
+      value: 
+      objectReference: {fileID: 1578128692}
+    - target: {fileID: 189395769, guid: dc48f4dca378853429ef6acedbc2dc09, type: 3}
       propertyPath: powerPowerUp
       value: 3
       objectReference: {fileID: 0}
@@ -4042,6 +4046,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: a37f44cbf8c2a7443a3c361efa2f233a, type: 3}
     - target: {fileID: 189395769, guid: dc48f4dca378853429ef6acedbc2dc09, type: 3}
+      propertyPath: pumpkinExplosion
+      value: 
+      objectReference: {fileID: 380716075227687073, guid: b3f2c50f445ec9e4486bee96fc56128a, type: 3}
+    - target: {fileID: 189395769, guid: dc48f4dca378853429ef6acedbc2dc09, type: 3}
       propertyPath: directionIndicator
       value: 
       objectReference: {fileID: 1043670635}
@@ -4049,6 +4057,14 @@ PrefabInstance:
       propertyPath: powerUpDurationSec
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 189395769, guid: dc48f4dca378853429ef6acedbc2dc09, type: 3}
+      propertyPath: projectileExplosion
+      value: 
+      objectReference: {fileID: 380716075227687073, guid: 73107a09e1196cc478ba0d228b526915, type: 3}
+    - target: {fileID: 189395769, guid: dc48f4dca378853429ef6acedbc2dc09, type: 3}
+      propertyPath: barrelShootParticles
+      value: 
+      objectReference: {fileID: 380716075227687073, guid: 2518cc90b07180f4bb0ce7ba6024c85d, type: 3}
     - target: {fileID: 543509771623743116, guid: dc48f4dca378853429ef6acedbc2dc09, type: 3}
       propertyPath: m_Name
       value: Weapon
@@ -4458,6 +4474,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1578128692 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8839945888885313347, guid: dc48f4dca378853429ef6acedbc2dc09, type: 3}
+  m_PrefabInstance: {fileID: 1578128685}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1578228101
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4878,7 +4899,7 @@ Transform:
   m_LocalScale: {x: 0.4999999, y: 0.5, z: 0.49999994}
   m_Children: []
   m_Father: {fileID: 1264196435}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &1632599448
 AudioSource:

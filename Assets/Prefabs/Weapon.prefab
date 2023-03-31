@@ -143,7 +143,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f56054ab49bf348b8890fefabe622a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directionIndicator: {fileID: 0}
+  projectileExplosion: {fileID: 0}
+  pumpkinExplosion: {fileID: 0}
+  barrelShootParticles: {fileID: 0}
+  barrelPivot: {fileID: 0}
+  ingameTxt: {fileID: 0}
   projectilePrefab: {fileID: 8329385117474810703, guid: 9bd00658f3ba43645b37571215487b3c, type: 3}
   projectileSpawnPoint: {fileID: 4121996975731226775}
   barrel: {fileID: 543509770263952192}
@@ -155,6 +159,9 @@ MonoBehaviour:
   powerPowerUp: 0
   powerUpDurationSec: 4
   timePowerUpSec: 10
+  AudioSource: {fileID: 0}
+  ShootAudio: {fileID: 0}
+  PickupPowerup: {fileID: 0}
   currentPowerUp: 0
 --- !u!1 &1668870608536086594
 GameObject:

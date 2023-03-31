@@ -49,14 +49,16 @@ https://assetstore.unity.com/packages/audio/sound-fx/toolkit-vol-2-sound-pack-bu
 
 UI
 Create UI panel with game descriptions:
-Destroy as many pumpkins as possible within the allotted time. Collect powerups to achieve the best result.
-Control:
- Charge the cannon - hold spacebar
- rotate the cannon - Left Arrow/Right Arrow or A/D
- change the angle of the barrel - Up Arrow/Down Arrow or W/S
+Destroy as many pumpkins as possible within the provided time. Collect power-ups to achieve the best result.
+Controls:
+ Charge the cannon - hold spacebar. the longer you hold the further you shoot.
+ Rotate the cannon - Left Arrow/Right Arrow or A/D
+ Change the angle of the barrel - Up Arrow/Down Arrow or W/S
+
+
+Projectile explosion particles effect
 
 Effects
 Pumkin explosion particles effect
-Projectile explosion particles effect
 Shoot from mortar dust particles effect
 
