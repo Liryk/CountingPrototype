@@ -5,6 +5,7 @@ public class Model
     public int Shots;
     public int Destroyed;
     public int RoundTime;
+    public string PlayerName;
 
     private static Model _instance;
 

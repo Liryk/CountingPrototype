@@ -1,10 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StartSceneController : MonoBehaviour
 {
+
+    public TextMeshProUGUI PlayerNameTxt;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class StartSceneController : MonoBehaviour
 
     public void OnStart()
     {
+        Model.Instance().PlayerName = PlayerNameTxt.text;
         SceneManager.LoadScene(1);
     }
 }

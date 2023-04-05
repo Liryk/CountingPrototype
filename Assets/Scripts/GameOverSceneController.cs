@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class GameOverSceneController : MonoBehaviour
 {
     public TextMeshProUGUI ShotsDestroyedTxt;
+    public TextMeshProUGUI GameOverTxt;
     
     private Model _model;
 
@@ -12,6 +13,7 @@ public class GameOverSceneController : MonoBehaviour
     void Start()
     {
         _model = Model.Instance();
+        GameOverTxt.text = $"Game Over {_model.PlayerName}!";
         ShotsDestroyedTxt.text = $"Destroyed: {_model.Destroyed}";
     }
 

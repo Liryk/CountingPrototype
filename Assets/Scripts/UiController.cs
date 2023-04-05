@@ -4,6 +4,7 @@ using TMPro;
 
 public class UiController : MonoBehaviour
 {
+    public TextMeshProUGUI playerNameTxt;
     public TextMeshProUGUI shotsTxt;
     public TextMeshProUGUI destroyedTxt;
     public GameObject forceIndicator;
@@ -23,6 +24,7 @@ public class UiController : MonoBehaviour
     void Start()
     {
         _model = Model.Instance();
+        playerNameTxt.text = $"Hello,{_model.PlayerName}!";
         currentShootInterval = shootIntervalSec;
         forceIndicator.transform.localScale = new Vector3(
             currentForceScale, 
