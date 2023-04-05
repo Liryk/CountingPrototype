@@ -2,8 +2,6 @@
 
 public class Model
 {
-    public static bool FirstStart = true;
-    
     public int Shots;
     public int Destroyed;
     public int RoundTime;

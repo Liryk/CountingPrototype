@@ -24,7 +24,7 @@ public class AxisSoundHandler : MonoBehaviour
         {
             AudioSource.Play();
         }
-        else if ((_axisValue == 0 && AudioSource.isPlaying) || Time.timeScale  == 0)
+        else if (_axisValue == 0 && AudioSource.isPlaying)
         {
             AudioSource.Stop();
         }

@@ -36,7 +36,7 @@ public class UiController : MonoBehaviour
     {
         currentShootInterval += Time.deltaTime;
         
-        if (Input.GetKeyDown(KeyCode.Space) && currentShootInterval >= shootIntervalSec && Time.timeScale > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && currentShootInterval >= shootIntervalSec)
         {
             startCharging = true;
             ChargingWeaponAudioSource.Play();
@@ -51,12 +51,9 @@ public class UiController : MonoBehaviour
             
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                if (Time.timeScale > 0)
-                {
-                    onShoot.Invoke(currentForceScale);
-                    currentForceScale = 0;
-                    currentShootInterval = 0;
-                }
+                onShoot.Invoke(currentForceScale);
+                currentForceScale = 0;
+                currentShootInterval = 0;
                 ChargingWeaponAudioSource.Stop();
                 startCharging = false;
             }
