@@ -4943,7 +4943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f475a2ce27d36c489150c89819dca4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roundTime: 60
+  roundTime: 15
   counterTxt: {fileID: 829833074}
   timeIsOver:
     m_PersistentCalls:

@@ -13,7 +13,7 @@ public class StartSceneController : MonoBehaviour
     void Start()
     {
         _model = Model.Instance();
-        PlayerNameTxt.text = _model.PlayerName;
+        PlayerNameTxt.text = _model.PlayerName ?? PlayerNameTxt.text;
     }
 
     // Update is called once per frame
